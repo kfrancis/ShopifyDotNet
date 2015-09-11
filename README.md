@@ -4,4 +4,4 @@ A soon to be comprehensive API wrapper for .NET folks who need to integrate with
 
 ## Get Started
 
-* Download the [latest release](/releases) or to install from Nuget, run ```Install-Package ShopifyDotNet```
+* Download the [latest release](../../releases) or to install from Nuget, run ```Install-Package ShopifyDotNet```
