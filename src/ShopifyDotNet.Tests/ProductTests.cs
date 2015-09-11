@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+using ShopifyDotNet.Products;
 
 namespace ShopifyDotNet.Tests
 {
@@ -14,12 +16,14 @@ namespace ShopifyDotNet.Tests
             var client = new Client("", "");
 
             // Act
-            var products = client.Products.All();
+            var result = client.Products.All();
 
             // Assert
-            Assert.IsNotNull(products);
-            Assert.AreNotEqual(0, products.Count());
+            Assert.IsNotNull(result);
+            Assert.IsNotNull(result.products);
+            Assert.AreNotEqual(0, result.products.Count);
+            Assert.IsTrue(result.products.All(p => p.id > 0));
+            Assert.IsTrue(result.products.All(p => !string.IsNullOrEmpty(p.handle)));
         }
-
     }
 }

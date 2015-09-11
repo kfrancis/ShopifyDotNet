@@ -1,12 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region License, Terms and Conditions
+//
+// ProductService.cs
+//
+// Authors: Kori Francis <twitter.com/djbyter>
+// Copyright (C) 2015 Kori Francis. All rights reserved.
+// 
+// THIS FILE IS LICENSED UNDER THE MIT LICENSE AS OUTLINED IMMEDIATELY BELOW:
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+//
+#endregion
 
 namespace ShopifyDotNet.Products
 {
-    public class ProductService : ApiBase
+    #region Imports
+    #endregion
+
+    /// <summary>
+    /// The products API
+    /// </summary>
+    public interface IProductService
+    {
+        /// <summary>
+        /// Get a list of all products
+        /// </summary>
+        /// <returns>The list of all products, null otherwise.</returns>
+        ProductList All();
+    }
+
+    /// <summary>
+    /// The products API
+    /// </summary>
+    public class ProductService : ApiBase, IProductService
     {
         /// <summary>
         /// Constructor
@@ -17,9 +58,13 @@ namespace ShopifyDotNet.Products
             : base(authToken, shopId)
         { }
 
-        public IEnumerable<Product> All()
+        /// <summary>
+        /// Get a list of all products
+        /// </summary>
+        /// <returns>The list of all products, null otherwise.</returns>
+        public ProductList All()
         {
-            return GetRequest<List<Product>>("/admin/products.json");
+            return GetRequest<ProductList>("/admin/products.json");
         }
     }
 }
