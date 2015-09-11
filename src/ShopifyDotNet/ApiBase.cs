@@ -113,11 +113,11 @@ namespace ShopifyDotNet
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                throw new ShopifyException("Not Found");
+                throw new ShopifyException("Not Found", response.ErrorException);
             }
             else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
             {
-                throw new ShopifyException("Internal Server Error");
+                throw new ShopifyException("Internal Server Error", response.ErrorException);
             }
 
             return response.Data;
@@ -141,11 +141,11 @@ namespace ShopifyDotNet
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                throw new ShopifyException("Not Found");
+                throw new ShopifyException("Not Found", response.ErrorException);
             }
             else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
             {
-                throw new ShopifyException("Internal Server Error");
+                throw new ShopifyException("Internal Server Error", response.ErrorException);
             }
 
             return response.Content;
@@ -216,11 +216,11 @@ namespace ShopifyDotNet
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                throw new ShopifyException("Not Found");
+                throw new ShopifyException("Not Found", response.ErrorException);
             }
             else if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
             {
-                throw new ShopifyException("Internal Server Error");
+                throw new ShopifyException("Internal Server Error", response.ErrorException);
             }
 
             return response.Data;
