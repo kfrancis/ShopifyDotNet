@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopifyDotNet", "src\ShopifyDotNet\ShopifyDotNet.csproj", "{1B2C9C2C-B1F4-4374-9063-D1E5FF4B870E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopifyDotNet.Tests", "src\ShopifyDotNet.Tests\ShopifyDotNet.Tests.csproj", "{12C18759-C827-40CF-B167-431EC380180E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B2C9C2C-B1F4-4374-9063-D1E5FF4B870E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B2C9C2C-B1F4-4374-9063-D1E5FF4B870E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B2C9C2C-B1F4-4374-9063-D1E5FF4B870E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B2C9C2C-B1F4-4374-9063-D1E5FF4B870E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12C18759-C827-40CF-B167-431EC380180E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12C18759-C827-40CF-B167-431EC380180E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12C18759-C827-40CF-B167-431EC380180E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12C18759-C827-40CF-B167-431EC380180E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
